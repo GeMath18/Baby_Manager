@@ -5,4 +5,12 @@
     <string name="enter_name_hint">Enter name</string>
     <string name="dob_label_text">Date of Birth</string>
     <string name="enter_date_of_birth_hint">Enter date of birth</string>
+    <string name="baby_s_gender_text">Baby\'s Gender</string>
+    <string name="gender_text">Gender</string>
+
+    <string-array name="labels_array">
+        <item>-</item>
+        <item>Boy</item>
+        <item>Girl</item>
+    </string-array>
 </resources>

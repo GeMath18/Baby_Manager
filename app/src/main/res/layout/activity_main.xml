@@ -38,6 +38,7 @@
         android:id="@+id/name_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/enter_name_hint"
         android:inputType="textPersonName"
@@ -48,7 +49,7 @@
         android:id="@+id/dob_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="44dp"
         android:layout_marginTop="24dp"
         android:text="@string/dob_label_text"
         android:textSize="18sp"
@@ -56,7 +57,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/baby_name"
-        app:layout_constraintVertical_bias="0.089" />
+        app:layout_constraintVertical_bias="0.02" />
 
     <EditText
         android:id="@+id/dob_text"
@@ -64,9 +65,36 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/enter_date_of_birth_hint"
+        android:importantForAutofill="no"
         android:inputType="date"
         app:layout_constraintBottom_toBottomOf="@+id/dob_label"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/dob_label" />
+
+    <TextView
+        android:id="@+id/gender_label"
+        android:layout_width="104dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/gender_text"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dob_label" />
+
+    <Spinner
+        android:id="@+id/label_spinner"
+        android:layout_width="178dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="24dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/gender_label"
+        app:layout_constraintTop_toBottomOf="@+id/dob_text" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
