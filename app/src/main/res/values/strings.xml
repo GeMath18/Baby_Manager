@@ -7,10 +7,19 @@
     <string name="enter_date_of_birth_hint">Enter date of birth</string>
     <string name="baby_s_gender_text">Baby\'s Gender</string>
     <string name="gender_text">Gender</string>
+    <string name="i_am_text">I am</string>
 
     <string-array name="labels_array">
         <item>-</item>
         <item>Boy</item>
         <item>Girl</item>
     </string-array>
+
+    <string-array name="persons_array">
+        <item>Mom</item>
+        <item>Dad</item>
+        <item>Relative</item>
+    </string-array>
+
+
 </resources>
