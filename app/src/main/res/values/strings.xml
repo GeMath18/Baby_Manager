@@ -8,6 +8,9 @@
     <string name="baby_s_gender_text">Baby\'s Gender</string>
     <string name="gender_text">Gender</string>
     <string name="i_am_text">I am</string>
+    <string name="save_text">Save</string>
+    <string name="string_save_text">Save</string>
+    <string name="empty_text">text</string>
 
     <string-array name="labels_array">
         <item>-</item>
