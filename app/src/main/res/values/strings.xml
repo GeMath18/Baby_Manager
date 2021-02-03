@@ -11,6 +11,9 @@
     <string name="save_text">Save</string>
     <string name="string_save_text">Save</string>
     <string name="empty_text">text</string>
+    <string name="home_text">Home</string>
+    <string name="calendar_text">Calendar</string>
+    <string name="graph_text">Graph</string>
 
     <string-array name="labels_array">
         <item>-</item>
@@ -23,6 +26,11 @@
         <item>Dad</item>
         <item>Relative</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_textview">Home</string>
+    <string name="calendar_textview">Calendar</string>
+    <string name="graph_textview">Graph</string>
 
 
 </resources>
