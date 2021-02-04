@@ -3,16 +3,13 @@ package com.example.babymanager;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.ListFragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 
 public class HomeFragment extends Fragment {
@@ -42,11 +39,12 @@ public class HomeFragment extends Fragment {
         arrayList.add(new Menu(R.drawable.sleepicon, "Days ago", "Activity"));
         arrayList.add(new Menu(R.drawable.momimage, "Days ago", "Activity"));
 
-        ListView listView = (ListView) view.findViewById(R.id.listView);
+        ListView listView = (ListView) view.findViewById(R.id.menu_listView);
 
-        ArrayAdapter<ArrayList> listViewAdapter = new ArrayAdapter<ArrayList>(getActivity(), android.R.layout.simple_list_item_1, Collections.singletonList(arrayList));
+        MenuAdapter menuAdapter = new MenuAdapter(getActivity(), R.layout.list_row, arrayList);
 
-        listView.setAdapter(listViewAdapter);
+        listView.setAdapter(menuAdapter);
+
         return view;
 
 
