@@ -31,6 +31,9 @@
     <string name="home_textview">Home</string>
     <string name="calendar_textview">Calendar</string>
     <string name="graph_textview">Graph</string>
+    <string name="name_text">Name</string>
+    <string name="des_text">Des</string>
+    <string name="todo_text">TODO</string>
 
 
 </resources>
