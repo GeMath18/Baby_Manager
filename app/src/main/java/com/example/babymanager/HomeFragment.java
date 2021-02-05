@@ -1,5 +1,7 @@
 package com.example.babymanager;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -44,6 +47,32 @@ public class HomeFragment extends Fragment {
         MenuAdapter menuAdapter = new MenuAdapter(getActivity(), R.layout.list_row, arrayList);
 
         listView.setAdapter(menuAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 0) {
+                    Intent intent = new Intent(view.getContext(), FeedingActivity.class);
+                    startActivity(intent);
+                }
+
+                if (position == 1) {
+                    Intent intent = new Intent(view.getContext(), DiaperingActivity.class);
+                    startActivity(intent);
+                }
+
+                if (position == 2) {
+                    Intent intent = new Intent(view.getContext(), SleepActivity.class);
+                    startActivity(intent);
+                }
+
+                if (position == 3) {
+                    Intent intent = new Intent(view.getContext(), MomActivity.class);
+                    startActivity(intent);
+                }
+            }
+        });
 
         return view;
 

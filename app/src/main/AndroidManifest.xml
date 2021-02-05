@@ -9,14 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BabyManager">
-<!--        <activity android:name=".SecondActivity"></activity>-->
-        <activity android:name=".SecondActivity"
-            android:label = "Second Activity"
+        <activity android:name=".MomActivity"></activity>
+        <activity android:name=".SleepActivity" />
+        <activity android:name=".DiaperingActivity" />
+        <activity android:name=".FeedingActivity" /> <!-- <activity android:name=".SecondActivity"></activity> -->
+        <activity
+            android:name=".SecondActivity"
+            android:label="Second Activity"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=
-                    "com.example.android.babymanager.MainActivity" />
+                android:value="com.example.android.babymanager.MainActivity" />
         </activity>
         <activity android:name=".MainActivity">
             <intent-filter>

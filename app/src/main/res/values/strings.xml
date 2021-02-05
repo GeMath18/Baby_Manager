@@ -34,6 +34,10 @@
     <string name="name_text">Name</string>
     <string name="des_text">Des</string>
     <string name="todo_text">TODO</string>
+    <string name="feeding_screen_text">Feeding Screen</string>
+    <string name="diapering_text">Diapering</string>
+    <string name="sleep_text">Sleep</string>
+    <string name="mom_text">Mom</string>
 
 
 </resources>
