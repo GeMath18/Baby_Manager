@@ -38,6 +38,7 @@
     <string name="diapering_text">Diapering</string>
     <string name="sleep_text">Sleep</string>
     <string name="mom_text">Mom</string>
+    <string name="baby_s_name_text">Baby\'s Name</string>
 
 
 </resources>
