@@ -39,6 +39,19 @@
     <string name="sleep_text">Sleep</string>
     <string name="mom_text">Mom</string>
     <string name="baby_s_name_text">Baby\'s Name</string>
+    <string name="left_text">Left</string>
+    <string name="right_text">Right</string>
+    <string name="formula_text">Formula</string>
+    <string name="feeding_options_text">Feeding Options</string>
+    <string name="supplement_text">Supplement</string>
+    <string name="left_1_text">Left</string>
+    <string name="right_1_text">Right</string>
+    <string name="left_button_text">Left button</string>
+    <string name="left_2_text">Left</string>
+    <string name="bottle_button_text">bottle button</string>
+    <string name="meal_button_text">meal button</string>
+    <string name="formula_1_text">Formula</string>
+    <string name="letter_r_button_text">letter r button</string>
 
 
 </resources>
