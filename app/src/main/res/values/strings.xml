@@ -52,6 +52,9 @@
     <string name="meal_button_text">meal button</string>
     <string name="formula_1_text">Formula</string>
     <string name="letter_r_button_text">letter r button</string>
+    <string name="left_b_text">Left</string>
+    <string name="right_b_text">Right</string>
+    <string name="formula_2_text">Formula</string>
 
 
 </resources>

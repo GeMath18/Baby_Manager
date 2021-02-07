@@ -73,7 +73,6 @@
             android:layout_width="100dp"
             android:layout_height="80dp"
             android:contentDescription="@string/left_button_text"
-            android:onClick="left_button"
             android:paddingTop="10dp"
             android:text="@string/left_text"
             app:srcCompat="@drawable/letter_l" />
@@ -83,7 +82,6 @@
             android:layout_width="100dp"
             android:layout_height="80dp"
             android:contentDescription="@string/letter_r_button_text"
-            android:onClick="right_button"
             android:paddingTop="10dp"
             app:srcCompat="@drawable/letter_r" />
 
@@ -93,7 +91,6 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:contentDescription="@string/bottle_button_text"
-            android:onClick="formula_button"
             android:paddingTop="10dp"
             app:srcCompat="@drawable/bottleicon2" />
 
@@ -103,7 +100,6 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:contentDescription="@string/meal_button_text"
-            android:onClick="meal_button"
             android:paddingTop="10dp"
             app:srcCompat="@drawable/meal_bowl" />
 
