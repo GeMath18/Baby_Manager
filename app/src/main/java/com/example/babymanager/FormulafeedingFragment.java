@@ -2,19 +2,19 @@ package com.example.babymanager;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
-import android.content.Context;
 import android.os.Bundle;
 
-import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 
 import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TimePicker;
 
 import java.text.SimpleDateFormat;
@@ -41,7 +41,7 @@ public class FormulafeedingFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_formulafeeding, container, false);
 
         //date-time picker text label
-        EditText date_time_in = (EditText) view.findViewById(R.id.date_time_label);
+        EditText date_time_in = (EditText) view.findViewById(R.id.datetime_label);
         date_time_in.setInputType(InputType.TYPE_NULL);
 
         date_time_in.setOnClickListener(new View.OnClickListener() {
@@ -51,6 +51,20 @@ public class FormulafeedingFragment extends Fragment {
             }
             
         });
+
+        //To Add Bottle options Spinner
+        Spinner spinner = (Spinner) view.findViewById(R.id.bottle_spinner);
+//        if (spinner != null) {
+//            spinner.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) getActivity());
+//        }
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(),
+                R.array.bottle_type_array, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource
+                (android.R.layout.simple_spinner_dropdown_item);
+// Apply the adapter to the spinner.
+        if (spinner != null) {
+            spinner.setAdapter(adapter);
+        }
 
 
         return view;
