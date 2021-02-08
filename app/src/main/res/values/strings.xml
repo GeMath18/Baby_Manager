@@ -55,6 +55,11 @@
     <string name="left_b_text">Left</string>
     <string name="right_b_text">Right</string>
     <string name="formula_2_text">Formula</string>
+    <string name="bottle_text">Bottle</string>
+    <string name="bottle_mini_text">Bottle</string>
+    <string name="bottle_corner_icon_text">bottle corner icon</string>
+    <string name="time_label">Time</string>
+    <string name="select_date_and_time_text">Select Date and Time</string>
 
 
 </resources>
