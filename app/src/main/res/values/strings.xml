@@ -69,6 +69,8 @@
     <string name="enter_amount_text">Enter amount</string>
     <string name="oz_text">oz</string>
     <string name="enter_qty_text">Enter qty</string>
+    <string name="save_1_text">Save</string>
+    <string name="bottle_activity_lab_text">Bottle Activity</string>
 
 
 </resources>
