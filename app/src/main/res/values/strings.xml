@@ -71,6 +71,7 @@
     <string name="enter_qty_text">Enter qty</string>
     <string name="save_1_text">Save</string>
     <string name="bottle_activity_lab_text">Bottle Activity</string>
+    <string name="activity_summary_text">Activity Summary</string>
 
 
 </resources>
