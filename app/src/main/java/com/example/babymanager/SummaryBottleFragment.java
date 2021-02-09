@@ -7,9 +7,14 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
 
 
 public class SummaryBottleFragment extends Fragment {
+
+    ListView listView;
 
 
     public SummaryBottleFragment() {
@@ -27,6 +32,29 @@ public class SummaryBottleFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_summary_bottle, container, false);
+        View view = inflater.inflate(R.layout.fragment_summary_bottle, container, false);
+
+        //**to pass the information from EditText to ListView
+        Bundle bundle = getArguments();
+
+        String dateTime = bundle.getString("DateTime");
+        String amount = bundle.getString("Amount");
+        String bSpinner = bundle.getString("BSpinner");
+
+        TextView dateTimeText = (TextView) view.findViewById(R.id.label_1);
+        TextView amountText = (TextView) view.findViewById(R.id.label_2);
+        TextView bSpinnerText = (TextView) view.findViewById(R.id.label_3);
+
+        dateTimeText.setText(dateTime);
+        amountText.setText(amount);
+        bSpinnerText.setText(bSpinner);
+
+
+//        ListView listView = (ListView) view.findViewById(R.id.summary_listView);
+//        listView.setAdapter((ListAdapter) listView);
+
+
+
+        return view;
     }
 }

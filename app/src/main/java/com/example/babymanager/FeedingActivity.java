@@ -2,6 +2,7 @@ package com.example.babymanager;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
@@ -18,6 +19,14 @@ public class FeedingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feeding);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        //To connect the Two Fragments
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.frame_layout, new FormulafeedingFragment());
+        fragmentTransaction.commit();
+
+        ////End of lane 22-28
 
         //to create action for buttons to connect with fragments
         init();

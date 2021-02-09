@@ -5,6 +5,8 @@ import android.app.TimePickerDialog;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.text.InputType;
 import android.view.LayoutInflater;
@@ -12,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -24,6 +27,9 @@ import java.util.Calendar;
 public class FormulafeedingFragment extends Fragment {
 
     EditText date_time_in;
+    EditText amountOz;
+    Spinner spinner;
+    Button saveBtn;
 
     public FormulafeedingFragment() {
         // Required empty public constructor
@@ -66,6 +72,34 @@ public class FormulafeedingFragment extends Fragment {
             spinner.setAdapter(adapter);
         }
 
+        //****To save Data to send to other Fragment****
+        EditText amountOz = (EditText) view.findViewById(R.id.amountq_label);
+//        Spinner bottleSpinner = (Spinner) view.findViewById(R.id.bottle_spinner);
+        Button saveBtn = (Button) view.findViewById(R.id.save_bottle_button);
+
+        saveBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String dateTime = date_time_in.getText().toString();
+                String amount = amountOz.getText().toString();
+                String bSpinner = spinner.getSelectedItem().toString();
+
+                Bundle bundle = new Bundle();
+                bundle.putString("DateTime", dateTime);
+                bundle.putString("Amount", amount);
+                bundle.putString("BSpinner", bSpinner);
+
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+                SummaryBottleFragment summaryBottleFragment = new SummaryBottleFragment();
+                summaryBottleFragment.setArguments(bundle);
+
+                fragmentTransaction.replace(R.id.summary_frame_layout, summaryBottleFragment);
+                fragmentTransaction.commit();
+
+            }
+        });
 
         return view;
     }
