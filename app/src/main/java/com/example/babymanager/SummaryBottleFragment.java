@@ -13,11 +13,14 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.List;
+
 
 public class SummaryBottleFragment extends Fragment {
 
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
+    RecyclerAdapter recyclerAdapter;
 
 
     public SummaryBottleFragment() {
@@ -41,6 +44,11 @@ public class SummaryBottleFragment extends Fragment {
         recyclerView = view.findViewById(R.id.recyclerView);
         layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
+        List<Bottle> list = FeedingActivity.roomDBClass.bottleDao().getAll();
+
+        recyclerAdapter = new RecyclerAdapter( list);
+        recyclerView.setAdapter(recyclerAdapter);
+
 
         //**to pass the information from EditText to ListView
 //        Bundle bundle = getArguments();

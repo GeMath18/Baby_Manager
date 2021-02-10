@@ -21,7 +21,9 @@ import android.widget.Spinner;
 import android.widget.TimePicker;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 
 public class FormulafeedingFragment extends Fragment {
@@ -30,6 +32,9 @@ public class FormulafeedingFragment extends Fragment {
     EditText amountOz;
     Spinner spinner;
     Button saveBtn;
+
+
+
 
     public FormulafeedingFragment() {
         // Required empty public constructor
@@ -111,14 +116,18 @@ public class FormulafeedingFragment extends Fragment {
                 fragmentTransaction.commit();
 
                 //ROOM
-                FeedingActivity.roomDBClass.bottleDao().insert(bottle);
                 date_time_in.setText("");
                 amountOz.setText("");
-                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),
                         R.array.bottle_type_array, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource
                         (android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
+
+                FeedingActivity.roomDBClass.bottleDao().insert(bottle);
+
+
 
             }
         });
