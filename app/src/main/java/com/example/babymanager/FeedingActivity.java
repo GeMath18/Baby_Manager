@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.room.Room;
+import androidx.room.RoomDatabase;
 
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +13,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class FeedingActivity extends AppCompatActivity {
+
+    //Room Database
+    static RoomDBClass roomDBClass;
 
     private ImageView left_label, right_label, bottle_label, meal_label;
 
@@ -27,6 +32,9 @@ public class FeedingActivity extends AppCompatActivity {
         fragmentTransaction.commit();
 
         ////End of lane 22-28
+
+        //ROOM Database
+        roomDBClass = Room.databaseBuilder(getApplicationContext(), RoomDBClass.class, "mydb").allowMainThreadQueries().build();
 
         //to create action for buttons to connect with fragments
         init();

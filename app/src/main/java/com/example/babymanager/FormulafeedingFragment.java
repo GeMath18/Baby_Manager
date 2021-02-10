@@ -77,26 +77,48 @@ public class FormulafeedingFragment extends Fragment {
 //        Spinner bottleSpinner = (Spinner) view.findViewById(R.id.bottle_spinner);
         Button saveBtn = (Button) view.findViewById(R.id.save_bottle_button);
 
+
+
+
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
                 String dateTime = date_time_in.getText().toString();
                 String amount = amountOz.getText().toString();
                 String bSpinner = spinner.getSelectedItem().toString();
 
-                Bundle bundle = new Bundle();
-                bundle.putString("DateTime", dateTime);
-                bundle.putString("Amount", amount);
-                bundle.putString("BSpinner", bSpinner);
+//                Bundle bundle = new Bundle();
+//                bundle.putString("DateTime", dateTime);
+//                bundle.putString("Amount", amount);
+//                bundle.putString("BSpinner", bSpinner);
+
+                //For Room
+                Bottle bottle = new Bottle();
+                bottle.setAmount(amount);
+                bottle.setDatetime(dateTime);
+                bottle.setSpinner(bSpinner);
+
 
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
                 SummaryBottleFragment summaryBottleFragment = new SummaryBottleFragment();
-                summaryBottleFragment.setArguments(bundle);
+//                summaryBottleFragment.setArguments(bundle);
 
                 fragmentTransaction.replace(R.id.summary_frame_layout, summaryBottleFragment);
                 fragmentTransaction.commit();
+
+                //ROOM
+                FeedingActivity.roomDBClass.bottleDao().insert(bottle);
+                date_time_in.setText("");
+                amountOz.setText("");
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.bottle_type_array, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource
+                        (android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
 
             }
         });
