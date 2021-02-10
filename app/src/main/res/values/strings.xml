@@ -72,6 +72,9 @@
     <string name="save_1_text">Save</string>
     <string name="bottle_activity_lab_text">Bottle Activity</string>
     <string name="activity_summary_text">Activity Summary</string>
+    <string name="activity_sum_text">Activity</string>
+    <string name="left_side_1_label">Left side</string>
+    <string name="chronometer_text">Chronometer</string>
 
 
 </resources>
