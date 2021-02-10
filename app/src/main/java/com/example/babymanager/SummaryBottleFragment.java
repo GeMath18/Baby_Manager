@@ -13,6 +13,7 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -42,12 +43,25 @@ public class SummaryBottleFragment extends Fragment {
 
         //Room
         recyclerView = view.findViewById(R.id.recyclerView);
+
+
+//        ArrayList<Bottle> list = new ArrayList<Bottle>();
+//
+//        Bottle bottle = new Bottle();
+//        bottle.setDatetime("12/12/12");
+//        bottle.setAmount("3");
+//        bottle.setSpinner("formula");
+//        list.add(bottle);
+
+
+        List<Bottle> list = MainActivity.roomDBClass.bottleDao().getAll();
+
         layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
-        List<Bottle> list = FeedingActivity.roomDBClass.bottleDao().getAll();
-
-        recyclerAdapter = new RecyclerAdapter( list);
+        recyclerAdapter = new RecyclerAdapter( getActivity(), list);
         recyclerView.setAdapter(recyclerAdapter);
+
+
 
 
         //**to pass the information from EditText to ListView

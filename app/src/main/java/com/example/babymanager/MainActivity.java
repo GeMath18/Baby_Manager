@@ -2,6 +2,7 @@ package com.example.babymanager;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,10 +16,17 @@ import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
+    //Room Database
+    static RoomDBClass roomDBClass;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //ROOM Database
+        roomDBClass = Room.databaseBuilder(getApplicationContext(), RoomDBClass.class, "mydb").allowMainThreadQueries().build();
+
 
         Spinner spinner = findViewById(R.id.label_spinner_2);
         if (spinner != null) {

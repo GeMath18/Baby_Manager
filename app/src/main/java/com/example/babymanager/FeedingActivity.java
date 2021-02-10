@@ -16,8 +16,7 @@ public class FeedingActivity extends AppCompatActivity {
 
 
 
-    //Room Database
-    static RoomDBClass roomDBClass;
+
 
     private ImageView left_label, right_label, bottle_label, meal_label;
 
@@ -35,8 +34,7 @@ public class FeedingActivity extends AppCompatActivity {
 
         ////End of lane 22-28
 
-        //ROOM Database
-        roomDBClass = Room.databaseBuilder(getApplicationContext(), RoomDBClass.class, "mydb").allowMainThreadQueries().build();
+
 
         //to create action for buttons to connect with fragments
         init();

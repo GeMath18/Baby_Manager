@@ -1,5 +1,6 @@
 package com.example.babymanager;
 
+import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,17 +14,21 @@ import java.util.List;
 
 public class RecyclerAdapter extends RecyclerView.Adapter <RecyclerAdapter.MyViewHolder> {
 
-    List<Bottle> list;
+    private List<Bottle> list;
+    private Activity context;
+    private RoomDBClass roomDBClass;
 
-    public RecyclerAdapter(List<Bottle>list) {
+    public RecyclerAdapter(Activity context, List<Bottle>list) {
+        this.context = context;
         this.list = list;
+        notifyDataSetChanged();
     }
 
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.single_view,parent);
+        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.single_view,parent, false);
         MyViewHolder myViewHolder=new MyViewHolder(view);
 
         return myViewHolder;
@@ -35,6 +40,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter <RecyclerAdapter.MyVie
         holder.dateTimeText.setText ( list.get(position).getDatetime());
         holder.amountText.setText(list.get(position).getAmount());
         holder.bSpinnerText.setText(list.get(position).getSpinner());
+
+
         
     }
 

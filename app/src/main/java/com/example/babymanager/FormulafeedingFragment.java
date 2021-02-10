@@ -125,7 +125,7 @@ public class FormulafeedingFragment extends Fragment {
                         (android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
 
-                FeedingActivity.roomDBClass.bottleDao().insert(bottle);
+                MainActivity.roomDBClass.bottleDao().insert(bottle);
 
 
 
