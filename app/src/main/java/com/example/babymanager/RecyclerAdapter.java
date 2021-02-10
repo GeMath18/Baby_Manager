@@ -37,9 +37,16 @@ public class RecyclerAdapter extends RecyclerView.Adapter <RecyclerAdapter.MyVie
     @Override
     public void onBindViewHolder(@NonNull RecyclerAdapter.MyViewHolder holder, int position) {
 
-        holder.dateTimeText.setText ( list.get(position).getDatetime());
-        holder.amountText.setText(list.get(position).getAmount());
-        holder.bSpinnerText.setText(list.get(position).getSpinner());
+        TextView label_1= holder.itemView.findViewById(R.id.label_1);
+        TextView label_2= holder.itemView.findViewById(R.id.label_2);
+        TextView label_3= holder.itemView.findViewById(R.id.label_3);
+        label_1.setText(list.get(position).getDatetime());
+        label_2.setText(list.get(position).getAmount());
+        label_3.setText(list.get(position).getSpinner());
+
+//        holder.dateTimeText.setText ( list.get(position).getDatetime());
+//        holder.amountText.setText(list.get(position).getAmount());
+//        holder.bSpinnerText.setText(list.get(position).getSpinner());
 
 
         
