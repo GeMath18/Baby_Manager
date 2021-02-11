@@ -77,6 +77,8 @@
     <string name="chronometer_text">Chronometer</string>
     <string name="reset_button_des">Reset button</string>
     <string name="save_left_text">Save</string>
+    <string name="righ_side_text">Righ side</string>
+    <string name="right_side_text">Right side</string>
 
 
 </resources>
