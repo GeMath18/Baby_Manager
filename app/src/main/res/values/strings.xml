@@ -79,6 +79,10 @@
     <string name="save_left_text">Save</string>
     <string name="righ_side_text">Righ side</string>
     <string name="right_side_text">Right side</string>
+    <string name="details_text">Details</string>
+    <string name="supplement_corner_icon_des">Supplement corner icon</string>
+    <string name="supplemental_text">Supplemental</string>
+    <string name="enter_details_text">Enter details</string>
 
 
 </resources>
