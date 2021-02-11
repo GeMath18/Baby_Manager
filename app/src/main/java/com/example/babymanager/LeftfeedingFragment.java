@@ -122,7 +122,7 @@ public class LeftfeedingFragment extends Fragment {
                         calendar.set(Calendar.HOUR_OF_DAY, hourOfDay);
                         calendar.set(Calendar.MINUTE, minute);
 
-                        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yy-MM-DD HH:mm");
+                        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yy-MM-dd HH:mm");
 
                         date_time_in.setText(simpleDateFormat.format(calendar.getTime()));
 
