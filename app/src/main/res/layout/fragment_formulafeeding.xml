@@ -41,7 +41,7 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
         <EditText
-            android:id="@+id/datetime_label"
+            android:id="@+id/datetime_l_label"
             android:layout_width="220dp"
             android:layout_height="40dp"
             android:autofillHints=""
@@ -62,7 +62,7 @@
             android:text="@string/amount_label_text"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/datetime_label" />
+            app:layout_constraintTop_toBottomOf="@+id/datetime_l_label" />
 
         <EditText
             android:id="@+id/amountq_label"

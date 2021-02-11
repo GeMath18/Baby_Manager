@@ -7,8 +7,8 @@
     tools:context=".FormulafeedingFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="383dp"
-        android:layout_height="260dp">
+        android:layout_width="match_parent"
+        android:layout_height="288dp">
 
         <ImageView
             android:id="@+id/imageView"
@@ -41,10 +41,10 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
         <EditText
-            android:id="@+id/datetime_label"
+            android:id="@+id/datetime_l_label"
             android:layout_width="220dp"
             android:layout_height="40dp"
-            android:layout_marginBottom="160dp"
+            android:layout_marginBottom="188dp"
             android:autofillHints=""
             android:hint="@string/select_date_and_time_text"
             android:inputType="none"
@@ -52,7 +52,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.361"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/time_label"
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
@@ -63,11 +62,50 @@
             android:text="@string/chronometer_text"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/datetime_label" />
+            app:layout_constraintTop_toBottomOf="@+id/datetime_l_label" />
 
+        <Chronometer
+            android:id="@+id/chronometer"
+            android:layout_width="117dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="124dp"
+            android:background="@drawable/bg"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.533"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <ToggleButton
+            android:id="@+id/Toggle"
+            android:layout_width="60dp"
+            android:layout_height="53dp"
+            android:background="@drawable/start_pause_btn_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.424"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chronometer"
+            app:layout_constraintVertical_bias="0.0" />
 
+        <ImageView
+            android:id="@+id/reset_btn"
+            android:layout_width="54dp"
+            android:layout_height="38dp"
+            android:contentDescription="@string/reset_button_des"
+            android:src="@drawable/reset_button"
+            app:layout_constraintBottom_toBottomOf="@+id/Toggle"
+            app:layout_constraintStart_toEndOf="@+id/Toggle" />
 
+        <Button
+            android:id="@+id/save_l_button"
+            android:layout_width="99dp"
+            android:layout_height="40dp"
+            android:text="@string/save_left_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Toggle" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

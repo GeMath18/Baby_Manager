@@ -12,7 +12,6 @@ import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -21,9 +20,7 @@ import android.widget.Spinner;
 import android.widget.TimePicker;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.List;
 
 
 public class FormulafeedingFragment extends Fragment {
@@ -52,7 +49,7 @@ public class FormulafeedingFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_formulafeeding, container, false);
 
         //date-time picker text label
-        EditText date_time_in = (EditText) view.findViewById(R.id.datetime_label);
+        EditText date_time_in = (EditText) view.findViewById(R.id.datetime_l_label);
         date_time_in.setInputType(InputType.TYPE_NULL);
 
         date_time_in.setOnClickListener(new View.OnClickListener() {

@@ -75,6 +75,8 @@
     <string name="activity_sum_text">Activity</string>
     <string name="left_side_1_label">Left side</string>
     <string name="chronometer_text">Chronometer</string>
+    <string name="reset_button_des">Reset button</string>
+    <string name="save_left_text">Save</string>
 
 
 </resources>

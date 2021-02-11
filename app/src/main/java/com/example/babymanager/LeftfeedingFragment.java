@@ -39,7 +39,7 @@ public class LeftfeedingFragment extends Fragment {
 
 
         //date-time picker text label
-        EditText date_time_in = (EditText) view.findViewById(R.id.datetime_label);
+        EditText date_time_in = (EditText) view.findViewById(R.id.datetime_l_label);
         date_time_in.setInputType(InputType.TYPE_NULL);
 
         date_time_in.setOnClickListener(new View.OnClickListener() {
