@@ -17,8 +17,8 @@
 
         <TextView
             android:id="@+id/label_1"
-            android:layout_width="143dp"
-            android:layout_height="26dp"
+            android:layout_width="136dp"
+            android:layout_height="24dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="24dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -26,21 +26,38 @@
 
         <TextView
             android:id="@+id/label_2"
-            android:layout_width="73dp"
-            android:layout_height="27dp"
+            android:layout_width="45dp"
+            android:layout_height="19dp"
             android:layout_marginTop="24dp"
             app:layout_constraintStart_toEndOf="@+id/label_1"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/oz_lab"
+            android:layout_width="44dp"
+            android:layout_height="23dp"
+            android:gravity="left"
+
+            android:text="oz"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/label_3"
+
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/label_2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.937" />
+
+        <TextView
             android:id="@+id/label_3"
-            android:layout_width="144dp"
+            android:layout_width="127dp"
             android:layout_height="27dp"
             android:layout_marginTop="24dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.515"
-            app:layout_constraintStart_toEndOf="@+id/label_2"
+            app:layout_constraintHorizontal_bias="0.692"
+            app:layout_constraintStart_toEndOf="@+id/oz_lab"
             app:layout_constraintTop_toTopOf="parent" />
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
