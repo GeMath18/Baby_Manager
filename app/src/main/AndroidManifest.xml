@@ -11,7 +11,9 @@
         android:theme="@style/Theme.BabyManager">
         <activity android:name=".MomActivity"></activity>
         <activity android:name=".SleepActivity" />
-        <activity android:name=".DiaperingActivity" />
+        <activity android:name=".DiaperingActivity" android:parentActivityName=".FeedingActivity" >
+
+        </activity>
         <activity android:name=".FeedingActivity" android:parentActivityName=".SecondActivity"/> <!-- <activity android:name=".SecondActivity"></activity> -->
         <activity
             android:name=".SecondActivity"

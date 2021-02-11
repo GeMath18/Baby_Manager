@@ -96,6 +96,7 @@
     <string name="diapering_title_text">Diapering</string>
     <string name="time_label_text">Time</string>
     <string name="diaper_status_text">Diaper Status</string>
+    <string name="save_btn_text">Save</string>
 
 
 </resources>

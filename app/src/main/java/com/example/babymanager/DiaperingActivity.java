@@ -26,6 +26,7 @@ public class DiaperingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diapering);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         EditText date_time_in = findViewById(R.id.datetime_diaper_label);
         date_time_in.setInputType(InputType.TYPE_NULL);
