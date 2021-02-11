@@ -31,6 +31,13 @@
         <item>Breast milk</item>
         <item>Formula</item>
     </string-array>
+
+    <string-array name="diaper_status_array">
+        <item>Wet</item>
+        <item>Dirty</item>
+        <item>Mixed</item>
+        <item>Dry</item>
+    </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="home_textview">Home</string>
@@ -84,6 +91,11 @@
     <string name="supplemental_text">Supplemental</string>
     <string name="enter_details_text">Enter details</string>
     <string name="oz_1_text">oz</string>
+    <string name="textview_label">TextView</string>
+    <string name="diaper_icon_des">diaper icon</string>
+    <string name="diapering_title_text">Diapering</string>
+    <string name="time_label_text">Time</string>
+    <string name="diaper_status_text">Diaper Status</string>
 
 
 </resources>

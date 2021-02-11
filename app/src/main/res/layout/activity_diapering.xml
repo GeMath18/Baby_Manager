@@ -4,15 +4,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingStart="10dp"
     tools:context=".DiaperingActivity">
 
+    <ImageView
+        android:id="@+id/diaper_icon"
+        android:layout_width="71dp"
+        android:layout_height="52dp"
+        android:contentDescription="@string/diaper_icon_des"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/diapericon" />
+
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/diaper_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/diapering_text"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="16dp"
+        android:text="@string/diapering_title_text"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.312"
+        app:layout_constraintStart_toEndOf="@+id/diaper_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Time_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/time_label_text"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diaper_icon" />
+
+    <EditText
+        android:id="@+id/datetime_diaper_label"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:autofillHints=""
+        android:hint="@string/select_date_and_time_text"
+        android:inputType="none"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/Time_label" />
+
+    <TextView
+        android:id="@+id/diaper_s_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/diaper_status_text"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/datetime_diaper_label" />
+
+    <Spinner
+
+        android:id="@+id/diaper_spinner"
+        android:layout_width="158dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="16dp"
+
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diaper_s_label" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
