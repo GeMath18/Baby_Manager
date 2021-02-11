@@ -36,9 +36,9 @@
             android:id="@+id/oz_lab"
             android:layout_width="44dp"
             android:layout_height="23dp"
-            android:gravity="left"
+            android:gravity="start"
 
-            android:text="oz"
+            android:text="@string/oz_text"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/label_3"
 
