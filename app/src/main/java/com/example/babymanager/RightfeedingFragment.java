@@ -6,12 +6,14 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.os.SystemClock;
 import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Chronometer;
+import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -46,7 +48,45 @@ public class RightfeedingFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_rightfeeding, container, false);
-        
+
+        //To set up Chronometer
+        chronometer = (Chronometer) view.findViewById(R.id.chronometer);
+        toggleButton = (ToggleButton) view.findViewById(R.id.Toggle);
+        reset_btn = (ImageView) view.findViewById(R.id.reset_btn);
+
+        toggleButton.setText(null);
+        toggleButton.setTextOn(null);
+        toggleButton.setTextOff(null);
+
+
+        toggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                if(isChecked){
+                    chronometer.setBase(SystemClock.elapsedRealtime()- PauseOffset);
+                    chronometer.start();
+                    isPlaying = true;
+                }else{
+                    chronometer.stop();
+                    PauseOffset = SystemClock.elapsedRealtime()- chronometer.getBase();
+                    isPlaying = false;
+                }
+            }
+        });
+
+        // to add the reset function of out button
+        reset_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(isPlaying){
+                    chronometer.setBase(SystemClock.elapsedRealtime());
+                    PauseOffset = 0;
+                    chronometer.start();
+                    isPlaying = true;
+                }
+            }
+        });
 
         //date-time picker text label
         EditText date_time_in = (EditText) view.findViewById(R.id.datetime_r_label);
