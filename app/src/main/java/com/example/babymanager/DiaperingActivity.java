@@ -44,6 +44,16 @@ public class DiaperingActivity extends AppCompatActivity {
 
         //Assign variable
         EditText date_time_in = findViewById(R.id.datetime_diaper_label);
+        date_time_in.setInputType(InputType.TYPE_NULL);
+
+        date_time_in.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDateTimeDialog(date_time_in);
+            }
+
+        });
+
         Button save_d_btn = findViewById(R.id.save_d_btn);
        RecyclerView recyclerView = findViewById(R.id.recycler_view);
 
@@ -58,15 +68,9 @@ public class DiaperingActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
 
-        date_time_in.setInputType(InputType.TYPE_NULL);
 
-        date_time_in.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showDateTimeDialog(date_time_in);
-            }
 
-        });
+
 
         Spinner spinner = findViewById(R.id.diaper_spinner);
 //        if (spinner != null) {
@@ -105,6 +109,7 @@ public class DiaperingActivity extends AppCompatActivity {
                 dataList.clear();
                 dataList.addAll(database.diaperDao().getAll());
                 adapter.notifyDataSetChanged();
+
 
 
             }

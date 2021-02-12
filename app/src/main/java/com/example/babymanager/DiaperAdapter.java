@@ -35,11 +35,16 @@ public class DiaperAdapter extends RecyclerView.Adapter<DiaperAdapter.ViewHolder
     @Override
     public void onBindViewHolder(@NonNull DiaperAdapter.ViewHolder holder, int position) {
 
-        DiaperData data = dataList.get(position);
-        database = RoomDBDiaper.getInstance(context);
+//        DiaperData data = dataList.get(position);
+//        database = RoomDBDiaper.getInstance(context);
+//
+//        holder.dateTimeText.setText(data.getDatetime());
+//        holder.statusText.setText(data.getSpinner());
 
-        holder.dateTimeText.setText(data.getDatetime());
-        holder.statusText.setText(data.getSpinner());
+        TextView diaper_dt_label = holder.itemView.findViewById(R.id.diaper_dt_label);
+        TextView status_label = holder.itemView.findViewById(R.id.status_label);
+        diaper_dt_label.setText(dataList.get(position).getDatetime());
+        status_label.setText(dataList.get(position).getSpinner());
 
     }
 
