@@ -1,6 +1,7 @@
 package com.example.babymanager;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.DatePickerDialog;
@@ -13,11 +14,14 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TimePicker;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 public class DiaperingActivity extends AppCompatActivity {
 
@@ -26,13 +30,34 @@ public class DiaperingActivity extends AppCompatActivity {
     Button save_d_btn;
     RecyclerView recyclerView;
 
+    //Implementing List for ROOM
+    List<DiaperData> dataList = new ArrayList<>();
+    LinearLayoutManager linearLayoutManager;
+    RoomDBDiaper database;
+    DiaperAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diapering);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        //Assign variable
         EditText date_time_in = findViewById(R.id.datetime_diaper_label);
+        Button save_d_btn = findViewById(R.id.save_d_btn);
+       RecyclerView recyclerView = findViewById(R.id.recycler_view);
+
+       //Initialize database
+        database = RoomDBDiaper.getInstance(this);
+        dataList = database.diaperDao().getAll();
+
+        //Initialize linear layout manager
+        linearLayoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(linearLayoutManager);
+        adapter = new DiaperAdapter(DiaperingActivity.this, dataList);
+        recyclerView.setAdapter(adapter);
+
+
         date_time_in.setInputType(InputType.TYPE_NULL);
 
         date_time_in.setOnClickListener(new View.OnClickListener() {
@@ -55,6 +80,35 @@ public class DiaperingActivity extends AppCompatActivity {
         if (spinner != null) {
             spinner.setAdapter(adapter);
         }
+
+        //Save button functionality
+        save_d_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String dateTime = date_time_in.getText().toString();
+                String bSpinner = spinner.getSelectedItem().toString();
+
+                DiaperData data = new DiaperData();
+                data.setDatetime(dateTime);
+                data.setSpinner(bSpinner);
+
+                database.diaperDao().insert(data);
+
+                date_time_in.setText("");
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(DiaperingActivity.this,
+                        R.array.diaper_status_array, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource
+                        (android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+
+                dataList.clear();
+                dataList.addAll(database.diaperDao().getAll());
+                adapter.notifyDataSetChanged();
+
+
+            }
+        });
     }
 
     private void showDateTimeDialog(EditText date_time_in) {
