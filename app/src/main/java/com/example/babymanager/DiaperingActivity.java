@@ -76,13 +76,13 @@ public class DiaperingActivity extends AppCompatActivity {
 //        if (spinner != null) {
 //            spinner.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) getActivity());
 //        }
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(DiaperingActivity.this,
+        ArrayAdapter<CharSequence> spinnerAdapter = ArrayAdapter.createFromResource(DiaperingActivity.this,
                 R.array.diaper_status_array, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource
+        spinnerAdapter.setDropDownViewResource
                 (android.R.layout.simple_spinner_dropdown_item);
 // Apply the adapter to the spinner.
         if (spinner != null) {
-            spinner.setAdapter(adapter);
+            spinner.setAdapter(spinnerAdapter);
         }
 
         //Save button functionality
@@ -100,11 +100,11 @@ public class DiaperingActivity extends AppCompatActivity {
                 database.diaperDao().insert(data);
 
                 date_time_in.setText("");
-                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(DiaperingActivity.this,
+                ArrayAdapter<CharSequence> spinnerAdapter = ArrayAdapter.createFromResource(DiaperingActivity.this,
                         R.array.diaper_status_array, android.R.layout.simple_spinner_item);
-                adapter.setDropDownViewResource
+                spinnerAdapter.setDropDownViewResource
                         (android.R.layout.simple_spinner_dropdown_item);
-                spinner.setAdapter(adapter);
+                spinner.setAdapter(spinnerAdapter);
 
                 dataList.clear();
                 dataList.addAll(database.diaperDao().getAll());
