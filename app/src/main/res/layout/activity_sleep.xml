@@ -4,15 +4,98 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingStart="10dp"
     tools:context=".SleepActivity">
 
+    <ImageView
+        android:id="@+id/sleep_icon"
+        android:layout_width="71dp"
+        android:layout_height="52dp"
+        android:contentDescription="@string/sleep_icon_des_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sleepicon" />
+
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/sleep_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/sleep_text"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="16dp"
+        android:text="@string/sleep_title_text"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.312"
+        app:layout_constraintStart_toEndOf="@+id/sleep_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Time_start_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/fell_asleep_text"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sleep_icon" />
+
+    <EditText
+        android:id="@+id/datetime_start_input"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:autofillHints=""
+        android:hint="@string/select_date_and_time_text"
+        android:inputType="none"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/Time_start_label" />
+
+    <TextView
+        android:id="@+id/Time_end_label"
+        android:layout_width="92dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/woke_up_text"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/datetime_start_input" />
+
+    <EditText
+        android:id="@+id/time_end_input"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:autofillHints=""
+        android:hint="@string/end_time_hint"
+        android:inputType="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Time_end_label" />
+
+    <Button
+        android:id="@+id/save_d_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/save_btn_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.455"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_end_input" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="399dp"
+        android:layout_height="407dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/save_d_btn"
+        app:layout_constraintVertical_bias="0.714"
+        tools:listitem="@layout/sleep_list_row" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

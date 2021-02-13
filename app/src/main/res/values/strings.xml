@@ -97,6 +97,12 @@
     <string name="time_label_text">Time</string>
     <string name="diaper_status_text">Diaper Status</string>
     <string name="save_btn_text">Save</string>
+    <string name="sleep_icon_des_text">sleep icon des</string>
+    <string name="time_s_label_text">Time</string>
+    <string name="fell_asleep_text">Fell asleep</string>
+    <string name="sleep_title_text">Sleep</string>
+    <string name="woke_up_text">Woke up</string>
+    <string name="end_time_hint">End time</string>
 
 
 </resources>
