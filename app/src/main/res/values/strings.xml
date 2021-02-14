@@ -55,7 +55,7 @@
     <string name="right_text">Right</string>
     <string name="formula_text">Formula</string>
     <string name="feeding_options_text">Feeding Options</string>
-    <string name="supplement_text">Supplement</string>
+    <string name="supplement_1_text">Supplement</string>
     <string name="left_1_text">Left</string>
     <string name="right_1_text">Right</string>
     <string name="left_button_text">Left button</string>
@@ -103,6 +103,7 @@
     <string name="sleep_title_text">Sleep</string>
     <string name="woke_up_text">Woke up</string>
     <string name="end_time_hint">End time</string>
+    <string name="supplement_text">Supplement</string>
 
 
 </resources>

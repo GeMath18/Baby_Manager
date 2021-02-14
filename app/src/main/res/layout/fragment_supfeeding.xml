@@ -26,7 +26,7 @@
             android:id="@+id/supple_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/supplemental_text"
+            android:text="@string/supplement_text"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/imageView"
             app:layout_constraintStart_toEndOf="@+id/imageView"
