@@ -33,7 +33,7 @@
             android:gravity="center"
             android:maxLines="1"
             android:padding="15dp"
-            android:text="@string/nap_time_text"
+            android:text="@string/nap_text_1"
             android:textSize="18sp" />
 
         <TextView

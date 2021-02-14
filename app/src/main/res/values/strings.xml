@@ -114,6 +114,7 @@
     <string name="eat_button_des">Eat button</string>
     <string name="exercise_button_des">Exercise button</string>
     <string name="nap_time_text">Nap Time</string>
+    <string name="nap_text_1">Nap</string>
 
 
 </resources>
