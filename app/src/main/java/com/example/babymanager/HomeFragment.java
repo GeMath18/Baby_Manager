@@ -40,7 +40,7 @@ public class HomeFragment extends Fragment {
         arrayList.add(new Menu(R.drawable.bottleicon2, "Time to feed your baby!", "Left or right side, bottle, or supplement?"));
         arrayList.add(new Menu(R.drawable.diapericon, "Time for a diaper change!", "Dirty, wet, mixed, or dry?"));
         arrayList.add(new Menu(R.drawable.sleepicon, "Time for the baby to sleep!", "Asleep or awake?"));
-        arrayList.add(new Menu(R.drawable.momimage, "Time for some self care!", "Nap, shower, eat, or bathe?"));
+        arrayList.add(new Menu(R.drawable.self_care, "Time for some self care!", "Nap, shower, eat, or exercise?"));
 
         ListView listView = (ListView) view.findViewById(R.id.menu_listView);
 

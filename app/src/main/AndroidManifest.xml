@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BabyManager">
-        <activity android:name=".MomActivity"></activity>
+        <activity android:name=".MomActivity" android:parentActivityName=".SecondActivity"></activity>
         <activity android:name=".SleepActivity" android:parentActivityName=".FeedingActivity"></activity>
         <activity android:name=".DiaperingActivity" android:parentActivityName=".FeedingActivity" >
         </activity>

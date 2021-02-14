@@ -104,6 +104,16 @@
     <string name="woke_up_text">Woke up</string>
     <string name="end_time_hint">End time</string>
     <string name="supplement_text">Supplement</string>
+    <string name="self_care_corner_text">Self Care Corner</string>
+    <string name="nap_text">Nap</string>
+    <string name="shower_text">Shower</string>
+    <string name="eat_text">Eat</string>
+    <string name="exercise_text">Exercise</string>
+    <string name="nap_button_text">Nap button</string>
+    <string name="shower_button_des">Shower button</string>
+    <string name="eat_button_des">Eat button</string>
+    <string name="exercise_button_des">Exercise button</string>
+    <string name="nap_time_text">Nap Time</string>
 
 
 </resources>
