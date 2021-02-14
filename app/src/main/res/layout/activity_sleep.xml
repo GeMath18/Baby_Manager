@@ -75,7 +75,7 @@
         app:layout_constraintTop_toBottomOf="@+id/Time_end_label" />
 
     <Button
-        android:id="@+id/save_d_btn"
+        android:id="@+id/save_sleep_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -86,7 +86,7 @@
         app:layout_constraintTop_toBottomOf="@+id/time_end_input" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view"
+        android:id="@+id/recycler_v_view"
         android:layout_width="399dp"
         android:layout_height="407dp"
         android:layout_marginTop="8dp"
@@ -94,7 +94,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/save_d_btn"
+        app:layout_constraintTop_toBottomOf="@+id/save_sleep_btn"
         app:layout_constraintVertical_bias="0.714"
         tools:listitem="@layout/sleep_list_row" />
 

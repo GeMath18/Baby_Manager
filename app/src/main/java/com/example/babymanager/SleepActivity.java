@@ -1,6 +1,8 @@
 package com.example.babymanager;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;
@@ -15,13 +17,21 @@ import android.widget.Spinner;
 import android.widget.TimePicker;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 public class SleepActivity extends AppCompatActivity {
 
     EditText date_start_time;
     EditText end_time;
     Button save_s_btn;
+    RecyclerView recyclerView;
+
+    List<SleepData> dataList = new ArrayList<>();
+    LinearLayoutManager linearLayoutManager;
+    RoomDBSleep database;
+    SleepAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +61,45 @@ public class SleepActivity extends AppCompatActivity {
                 showTimeDialog(end_time);
             }
         });
+
+        Button save_s_btn = findViewById(R.id.save_sleep_btn);
+        RecyclerView recyclerView = findViewById(R.id.recycler_v_view);
+
+        //Initialize database
+        database = RoomDBSleep.getInstance(this);
+        dataList = database.sleepDao().getAll();
+
+        //Initialize linear layout manager
+        linearLayoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(linearLayoutManager);
+        adapter = new SleepAdapter(SleepActivity.this, dataList);
+        recyclerView.setAdapter(adapter);
+
+        save_s_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String dateTime = date_start_time.getText().toString();
+                String timeText = end_time.getText().toString();
+
+                SleepData sleepData = new SleepData();
+                sleepData.setDatetime(dateTime);
+                sleepData.setSleep_time(timeText);
+
+                database.sleepDao().insert(sleepData);
+
+                date_start_time.setText("");
+                end_time.setText("");
+
+                dataList.clear();
+                dataList.addAll(database.sleepDao().getAll());
+                adapter.notifyDataSetChanged();
+
+
+            }
+        });
+
+
     }
 
     //End Time Dialog
@@ -110,43 +159,6 @@ public class SleepActivity extends AppCompatActivity {
                 calendar.get(Calendar.DAY_OF_MONTH)).show();
     }
 
-    //Stop time TimeDialog
-//    private void showDateTimeDialog() {
 
-//        final Calendar calendar = Calendar.getInstance();
-//        DatePickerDialog.OnDateSetListener dateSetListener=new DatePickerDialog.OnDateSetListener() {
-//            @Override
-//            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-//                calendar.set(Calendar.YEAR, year);
-//                calendar.set(Calendar.MONTH,month);
-//                calendar.set(Calendar.DAY_OF_MONTH,dayOfMonth);
-//
-//                TimePickerDialog.OnTimeSetListener timeSetListener=new TimePickerDialog.OnTimeSetListener() {
-//
-//                    @Override
-//                    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-//                        calendar.set(Calendar.HOUR_OF_DAY, hourOfDay);
-//                        calendar.set(Calendar.MINUTE, minute);
-//
-//                        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yy-MM-dd HH:mm");
-//
-////                        date_start_time.setText(simpleDateFormat.format(calendar.getTime()));
-//                        date_stop_time.setText(simpleDateFormat.format(calendar.getTime()));
-//                    }
-//                };
-//
-//                new TimePickerDialog(SleepActivity.this,timeSetListener,calendar.get(Calendar.HOUR_OF_DAY),calendar.get(Calendar.MINUTE),false).show();
-//
-//            }
-//        };
-//
-//        new DatePickerDialog(SleepActivity.this,dateSetListener,
-//                calendar.get(Calendar.YEAR),
-//                calendar.get(Calendar.MONTH),
-//                calendar.get(Calendar.DAY_OF_MONTH)).show();
-//
-//
-//        showDateTimeDialog(date_stop_time);
-//    }
 
 }
