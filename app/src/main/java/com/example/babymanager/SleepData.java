@@ -7,17 +7,17 @@ import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
 
-@Entity(tableName = "table_sleep")
+@Entity(tableName = "table_name")
 public class SleepData implements Serializable {
     //Create id column
     @PrimaryKey(autoGenerate = true)
     private int ID;
 
-    @ColumnInfo(name = "sleepDatetime")
-    private String datetime;
+    @ColumnInfo(name = "sleepStartTime")
+    private String start_time;
 
-    @ColumnInfo(name = "sleepTime")
-    private String sleep_time;
+    @ColumnInfo(name = "sleepStopTime")
+    private String stop_time;
 
     public int getID() {
         return ID;
@@ -27,19 +27,19 @@ public class SleepData implements Serializable {
         this.ID = ID;
     }
 
-    public String getDatetime() {
-        return datetime;
+    public String getStart_time() {
+        return start_time;
     }
 
-    public void setDatetime(String datetime) {
-        this.datetime = datetime;
+    public void setStart_time(String start_time) {
+        this.start_time = start_time;
     }
 
-    public String getSleep_time() {
-        return sleep_time;
+    public String getStop_time() {
+        return stop_time;
     }
 
-    public void setSleep_time(String sleep_time) {
-        this.sleep_time = sleep_time;
+    public void setStop_time(String stop_time) {
+        this.stop_time = stop_time;
     }
 }

@@ -18,7 +18,7 @@ public interface SleepDao {
     @Delete
     void delete(SleepData sleepData);
 
-    @Query("SELECT * FROM table_sleep")
+    @Query("SELECT * FROM table_name")
     List<SleepData> getAll();
 
 

@@ -35,10 +35,12 @@ public class SleepAdapter extends RecyclerView.Adapter<SleepAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull SleepAdapter.ViewHolder holder, int position) {
 
+//        SleepData data = dataList.get(position);
+
         TextView sleepStart_dt_label = holder.itemView.findViewById(R.id.sleepStart_dt_label);
         TextView sleepEnd_dt_label = holder.itemView.findViewById(R.id.sleepEnd_dt_label);
-        sleepStart_dt_label.setText(dataList.get(position).getDatetime());
-        sleepEnd_dt_label.setText(dataList.get(position).getSleep_time());
+        sleepStart_dt_label.setText(dataList.get(position).getStart_time());
+        sleepEnd_dt_label.setText(dataList.get(position).getStop_time());
 
 
     }
@@ -51,13 +53,13 @@ public class SleepAdapter extends RecyclerView.Adapter<SleepAdapter.ViewHolder> 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView dateTimeText, timeText;
+        TextView startTimeText, stopTimeText;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            dateTimeText = itemView.findViewById(R.id.sleepStart_dt_label);
-            timeText = itemView.findViewById(R.id.sleepEnd_dt_label);
+            startTimeText = itemView.findViewById(R.id.sleepStart_dt_label);
+            stopTimeText = itemView.findViewById(R.id.sleepEnd_dt_label);
 
         }
     }

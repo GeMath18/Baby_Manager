@@ -63,7 +63,7 @@ public class SleepActivity extends AppCompatActivity {
         });
 
         Button save_s_btn = findViewById(R.id.save_sleep_btn);
-        RecyclerView recyclerView = findViewById(R.id.recycler_v_view);
+        RecyclerView recyclerView = findViewById(R.id.recycler_view);
 
         //Initialize database
         database = RoomDBSleep.getInstance(this);
@@ -79,14 +79,14 @@ public class SleepActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String dateTime = date_start_time.getText().toString();
-                String timeText = end_time.getText().toString();
+                String startTime = date_start_time.getText().toString();
+                String stopTime = end_time.getText().toString();
 
-                SleepData sleepData = new SleepData();
-                sleepData.setDatetime(dateTime);
-                sleepData.setSleep_time(timeText);
+                SleepData data = new SleepData();
+                data.setStart_time(startTime);
+                data.setStop_time(stopTime);
 
-                database.sleepDao().insert(sleepData);
+                database.sleepDao().insert(data);
 
                 date_start_time.setText("");
                 end_time.setText("");

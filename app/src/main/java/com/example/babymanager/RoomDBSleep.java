@@ -11,7 +11,7 @@ import androidx.room.RoomDatabase;
 public abstract class RoomDBSleep extends RoomDatabase {
 
     private static RoomDBSleep database;
-    private static String DATABASE_NAME = "database";
+    private static String DATABASE_NAME = "databaseS";
     public synchronized static RoomDBSleep getInstance(Context context){
 
         if (database == null) {
