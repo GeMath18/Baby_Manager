@@ -2,6 +2,7 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/feeding_layout"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
@@ -107,7 +108,104 @@
 
     </LinearLayout>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="398dp"
+        android:layout_height="526dp">
+
+        <ImageView
+            android:id="@+id/nap_icon"
+            android:layout_width="68dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/nap_icon_image_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/mom_nap" />
+
+        <TextView
+            android:id="@+id/nap_1_title"
+            android:layout_width="36dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="28dp"
+            android:text="@string/nap_2_text"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/nap_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/time_nap_label"
+            android:layout_width="90dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/start_time_1_text"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nap_icon" />
+
+        <EditText
+            android:id="@+id/datetime_start_nap_input"
+            android:layout_width="203dp"
+            android:layout_height="38dp"
+            android:autofillHints=""
+            android:hint="@string/select_date_and_time_text"
+            android:inputType="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/time_nap_label" />
+
+        <TextView
+            android:id="@+id/end_nap_label"
+            android:layout_width="87dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="@string/end_time_text"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/time_nap_label" />
+
+        <EditText
+            android:id="@+id/time_end_time_input"
+            android:layout_width="181dp"
+            android:layout_height="40dp"
+            android:autofillHints=""
+            android:hint="@string/end_time_hint"
+            android:inputType="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/end_nap_label" />
+
+        <Button
+            android:id="@+id/save_nap_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save_btn_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.467"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/time_end_time_input" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="355dp"
+            android:layout_height="271dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/save_nap_btn"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
 
 </LinearLayout>
+
+

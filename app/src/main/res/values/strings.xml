@@ -115,6 +115,11 @@
     <string name="exercise_button_des">Exercise button</string>
     <string name="nap_time_text">Nap Time</string>
     <string name="nap_text_1">Nap</string>
+    <string name="nap_icon_image_text">nap icon image</string>
+    <string name="nap_2_text">Nap</string>
+    <string name="time_nap_2">Time</string>
+    <string name="start_time_1_text">Start time</string>
+    <string name="end_time_text">End time</string>
 
 
 </resources>
