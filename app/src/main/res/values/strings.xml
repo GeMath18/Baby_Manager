@@ -120,6 +120,8 @@
     <string name="time_nap_2">Time</string>
     <string name="start_time_1_text">Start time</string>
     <string name="end_time_text">End time</string>
+    <string name="diaper_change_text">Diaper Change</string>
+    <string name="baby_manager_text">Baby Manager</string>
 
 
 </resources>
