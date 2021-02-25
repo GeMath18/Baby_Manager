@@ -38,9 +38,9 @@ def room_version = "2.2.6"
 
 App View | Actions|
 --- | :--- | 
-![Home Page](documentation/screen/homescreen.png) | <ul><li>Home Page</li><li>Click on door to enter bird's house</li><li>Click on letter for new post card from bird [Notifications](#notificationcompat)</li></ul>| 
-![House Page](documentation/screen/house.png)| <ul><li>Inside House Page</li><li>Click on red luggage to pack for bird and set for home or away [WorkManager](#workmanager)</li><li>Click on letter for new post card from bird [Notifications](#notification-of-post-cards)</li></ul>| 
-![Away](documentation/screen/away.png) | <ul><li>Home or Away is determined by [WorkManager's](#workmanager) latest logged status</li><li>When Away, workmanager will schedule task of adding new post card to database which will send new notification</li></ul>|
+![Home Page](Documentation/homescreen.png) | <ul><li>Home Page</li><li>Click any of the four options to start tracking your baby's activities</li></ul>|
+![Feeding Options](Documentation/Feedingscreen.png)| <ul><li>4 Feeding Options</li><li>Click on Left or Right side, you have the option to set a date and time. Start a chronometer</li><li>Click on the Bottle option, you have the option to set a date and time. Enter amount in ounces and select between breast milk or formula</li><li>Click on the Supplement option where you may enter and save the description</li><li>User can enter the info needed and save the activity</li></ul>|
+![Diaper Change Option](Documentation/diaperscreen.png) | <ul><li>Diaper Change Option</li><li>User can set a date and time</li><li>User select options of the diaper status</li><li>User can enter the info needed and save the activity</li></ul>|
 
 
 
