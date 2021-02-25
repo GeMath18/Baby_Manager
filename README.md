@@ -35,6 +35,11 @@ def room_version = "2.2.6"
   // optional - Test helpers
   testImplementation "androidx.room:room-testing:$room_version"
 ```
+---
+
+## App Features
+
+### Overview 
 
 App View | Actions|
 --- | :--- | 
