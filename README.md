@@ -43,11 +43,11 @@ def room_version = "2.2.6"
 
 App View | Actions|
 --- | :--- | 
-![Home Page](Documentation/homescreen.png) | Home Page<ul><li>Click any of the four options to start tracking your baby's activities</li></ul>|
-![Feeding Options](Documentation/Feedingscreen.png)| <ul>4 Feeding Options:</ul><ul><li>Click on Left or Right side, you have the option to set a date and time. Start a chronometer</li><li>Click on the Bottle option, you have the option to set a date and time. Enter amount in ounces and select between breast milk or formula</li><li>Click on the Supplement option where you may enter and save the description</li><li>User can enter the info needed and save the activity</li></ul>|
-![Diaper Change Option](Documentation/diaperscreen.png) | <ul><li>Diaper Change Option</li><li>User can set a date and time</li><li>User can select 4 options for the diaper status</li><li>User can enter the info needed and save the activity</li></ul>|
-![Sleep Option](Documentation/sleepscreen.png) | <ul><li>Sleep Option</li><li>User can set a date and time when the baby fell asleep</li><li>User can set a date and time when the baby woke up</li><li>User can enter the info needed and save the activity</li></ul>|
-![Self Care Corner](Documentation/selfcarescreen.png) | <ul><li>4 Self Care Options</li><li>Click on Nap, you have the option to set a date and time</li><li>Click on Shower, you have the option to set a date and time</li><li>Click on Eat, you have the option to set a date and time</li><li>Click on Exercise, you have the option to set a date and time</li><li>User can enter the info needed and save the activity</li></ul>|
+![Home Page](Documentation/homescreen.png) | Home Page:<ul><li>Click any of the four options to start tracking your baby's activities</li></ul>|
+![Feeding Options](Documentation/Feedingscreen.png)| 4 Feeding Options:<ul><li>Click on Left or Right side, you have the option to set a date and time. Start a chronometer</li><li>Click on the Bottle option, you have the option to set a date and time. Enter amount in ounces and select between breast milk or formula</li><li>Click on the Supplement option where you may enter and save the description</li><li>User can enter the info needed and save the activity</li></ul>|
+![Diaper Change Option](Documentation/diaperscreen.png) | Diaper Change Option:<ul><li>User can set a date and time</li><li>User can select 4 options for the diaper status</li><li>User can enter the info needed and save the activity</li></ul>|
+![Sleep Option](Documentation/sleepscreen.png) | Sleep Option:<ul><li>User can set a date and time when the baby fell asleep</li><li>User can set a date and time when the baby woke up</li><li>User can enter the info needed and save the activity</li></ul>|
+![Self Care Corner](Documentation/selfcarescreen.png) | 4 Self Care Options:<ul><li>Click on Nap, you have the option to set a date and time</li><li>Click on Shower, you have the option to set a date and time</li><li>Click on Eat, you have the option to set a date and time</li><li>Click on Exercise, you have the option to set a date and time</li><li>User can enter the info needed and save the activity</li></ul>|
 
 ---
 
