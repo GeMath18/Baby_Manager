@@ -36,6 +36,13 @@ def room_version = "2.2.6"
   testImplementation "androidx.room:room-testing:$room_version"
 ```
 
+App View | Actions|
+--- | :--- | 
+![Home Page](homescreen.png) | <ul><li>Home Page</li><li>Click on door to enter bird's house</li><li>Click on letter for new post card from bird [Notifications](#notificationcompat)</li></ul>| 
+![House Page](documentation/screen/house.png)| <ul><li>Inside House Page</li><li>Click on red luggage to pack for bird and set for home or away [WorkManager](#workmanager)</li><li>Click on letter for new post card from bird [Notifications](#notification-of-post-cards)</li></ul>| 
+![Away](documentation/screen/away.png) | <ul><li>Home or Away is determined by [WorkManager's](#workmanager) latest logged status</li><li>When Away, workmanager will schedule task of adding new post card to database which will send new notification</li></ul>|
+
+
 
 
 ## Trello Link
